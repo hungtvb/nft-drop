@@ -4,7 +4,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    ripple: theme => ({
+      colors: theme('colors'),
+      darken: 0.1
+    }),
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-ripple')()
+  ],
 }
